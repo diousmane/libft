@@ -6,7 +6,7 @@
 #    By: ousdiall <ousdiall@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 12:51:12 by lharrar           #+#    #+#              #
-#    Updated: 2025/10/01 16:35:05 by ousdiall         ###   ########.fr        #
+#    Updated: 2025/10/26 18:47:15 by ousdiall         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,8 @@ ft_putnbr_printf.c \
 ft_putstr_printf.c \
 ft_putunsigned_printf.c \
 ft_check.c \
+get_next_line_utils.c \
+get_next_line.c \
 
 SRCS_B = ft_lstnew_bonus.c \
 ft_lstadd_front_bonus.c \

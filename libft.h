@@ -6,18 +6,23 @@
 /*   By: ousdiall <ousdiall@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 14:48:22 by ousdiall          #+#    #+#             */
-/*   Updated: 2025/10/01 16:10:24 by ousdiall         ###   ########.fr       */
+/*   Updated: 2025/10/26 18:49:05 by ousdiall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
 # include <ctype.h>
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -69,14 +74,17 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-int	ft_printf(const char *str, ...);
-int	ft_putchar_print(char c);
-int	ft_putstr_print(char *str);
-int	ft_check(char c, va_list args);
-int	ft_putnbr_print(int n);
-int	ft_putunsigned_print(unsigned int n);
-int	ft_puthexa_print(unsigned long n);
-int	ft_puthexa_upper_print(unsigned long n);
-
+int		ft_printf(const char *str, ...);
+int		ft_putchar_print(char c);
+int		ft_putstr_print(char *str);
+int		ft_check(char c, va_list args);
+int		ft_putnbr_print(int n);
+int		ft_putunsigned_print(unsigned int n);
+int		ft_puthexa_print(unsigned long n);
+int		ft_puthexa_upper_print(unsigned long n);
+char	*get_next_line(int fd);
+size_t	ft_strlen_get(const char *s);
+char	*ft_strchr_get(const char *s, int c);
+char	*ft_strjoin_get(char *s1, char *s2);
 
 #endif
